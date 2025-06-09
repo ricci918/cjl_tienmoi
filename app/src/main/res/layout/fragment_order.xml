@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_efefef"
+    tools:context=".ui.fragment.TienOrderFragment">
+
+    <include
+        android:id="@+id/head_id"
+        layout="@layout/return_layout" />
+
+    <RadioGroup
+        android:id="@+id/rg_id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_30"
+        android:layout_below="@id/head_id"
+        android:layout_marginStart="@dimen/space_10"
+        android:layout_marginTop="@dimen/space_20"
+        android:layout_marginEnd="@dimen/space_10"
+        android:background="@drawable/shape_white_20dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb1_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/space_15"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:padding="@dimen/space_5"
+            android:text="@string/fragment18"
+            android:textColor="@drawable/select_fragment_color"
+            android:textSize="@dimen/sp_11"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rb2_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/space_10"
+            android:layout_marginEnd="@dimen/space_10"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/space_5"
+            android:text="@string/fragment19"
+            android:textColor="@drawable/select_fragment_color"
+            android:textSize="@dimen/sp_11"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rb3_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/space_15"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/space_5"
+            android:text="@string/fragment20"
+            android:textColor="@drawable/select_fragment_color"
+            android:textSize="@dimen/sp_11"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/sfl_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rg_id"
+        android:layout_marginStart="@dimen/space_10"
+        android:layout_marginTop="@dimen/space_20"
+        android:layout_marginEnd="@dimen/space_10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv1_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv2_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv3_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>

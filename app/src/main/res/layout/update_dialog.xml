@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_5dp"
+    android:paddingBottom="@dimen/space_30">
+
+    <ImageView
+        android:id="@+id/iv1_id"
+        android:layout_width="@dimen/space_100"
+        android:layout_height="@dimen/space_100"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/space_50"
+        android:src="@mipmap/gx" />
+
+    <TextView
+        android:id="@+id/tv1_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv1_id"
+        android:layout_marginStart="@dimen/space_20"
+        android:layout_marginTop="@dimen/space_30"
+        android:layout_marginEnd="@dimen/space_20"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/space_5"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv2_id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_30"
+        android:layout_below="@id/tv1_id"
+        android:layout_marginStart="@dimen/space_40"
+        android:layout_marginTop="@dimen/space_70"
+        android:layout_marginEnd="@dimen/space_40"
+        android:background="@drawable/shape_60a7fe_5dp"
+        android:gravity="center"
+        android:text="@string/dialog2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/tv3_id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_30"
+        android:layout_below="@id/tv2_id"
+        android:layout_marginStart="@dimen/space_40"
+        android:layout_marginTop="@dimen/space_10"
+        android:layout_marginEnd="@dimen/space_40"
+        android:gravity="center"
+        android:text="@string/dialog3"
+        android:textSize="@dimen/sp_14" />
+
+</RelativeLayout>

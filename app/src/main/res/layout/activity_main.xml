@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.tienmoi.vayonline.nhanh.ui.custom.TienViewPagerView
+        android:id="@+id/vp_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/rg_id"
+        android:layout_alignParentTop="true" />
+
+    <RadioGroup
+        android:id="@+id/rg_id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_60"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb1_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/select_main_icon1"
+            android:drawablePadding="@dimen/space_f5"
+            android:gravity="center"
+            android:paddingTop="@dimen/space_10"
+            android:text="@string/main1"
+            android:textColor="@drawable/select_main_color"
+            android:textSize="@dimen/sp_9" />
+
+        <RadioButton
+            android:id="@+id/rb2_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/select_main_icon2"
+            android:drawablePadding="@dimen/space_f5"
+            android:gravity="center"
+            android:paddingTop="@dimen/space_10"
+            android:text="@string/main2"
+            android:textColor="@drawable/select_main_color"
+            android:textSize="@dimen/sp_9" />
+
+        <RadioButton
+            android:id="@+id/rb3_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/select_main_icon3"
+            android:drawablePadding="@dimen/space_f5"
+            android:gravity="center"
+            android:paddingTop="@dimen/space_10"
+            android:text="@string/main3"
+            android:textColor="@drawable/select_main_color"
+            android:textSize="@dimen/sp_9" />
+    </RadioGroup>
+</RelativeLayout>

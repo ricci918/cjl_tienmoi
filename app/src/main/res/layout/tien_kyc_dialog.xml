@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_5dp">
+
+    <TextView
+        android:id="@+id/tv1_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/space_20"
+        android:textColor="@color/color_60a7fe"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold" />
+
+    <com.github.gzuliyujiang.wheelview.widget.WheelView
+        android:id="@+id/wv_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20"
+        android:layout_marginEnd="@dimen/space_20"
+        app:wheel_indicatorEnabled="false"
+        android:layout_below="@id/tv1_id"
+        android:layout_centerHorizontal="true"
+        app:wheel_itemSpace="@dimen/space_44"
+        app:wheel_itemTextColor="#9C9C9C"
+        app:wheel_itemTextColorSelected="@color/black"
+        app:wheel_itemTextSize="16sp"
+        app:wheel_itemTextSizeSelected="16sp" />
+
+    <TextView
+        android:id="@+id/tv2_id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_35"
+        android:layout_below="@id/wv_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/space_30"
+        android:layout_marginEnd="@dimen/space_30"
+        android:layout_marginBottom="@dimen/space_20"
+        android:background="@drawable/shape_60a7fe_5dp"
+        android:gravity="center"
+        android:text="@string/dialog24"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12" />
+</RelativeLayout>

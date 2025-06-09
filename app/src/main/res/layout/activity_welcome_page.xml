@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/welcome_image1"
+    tools:context=".ui.activity.TienWelcomePageActivity">
+
+    <ImageView
+        android:layout_width="384dp"
+        android:layout_height="377dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/space_100"
+        android:layout_marginEnd="-80dp"
+        android:src="@mipmap/welcome_image2" />
+
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_30"
+        android:layout_marginTop="@dimen/space_60"
+        android:text="@string/welcome_text1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_24"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="@dimen/space_79"
+        android:layout_height="@dimen/space_79"
+        android:layout_below="@id/tv_id"
+        android:layout_marginStart="@dimen/space_30"
+        android:layout_marginTop="@dimen/space_20"
+        android:src="@mipmap/logo" />
+
+    <TextView
+        android:id="@+id/tv1_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_logo"
+        android:layout_marginStart="@dimen/space_30"
+        android:layout_marginTop="@dimen/space_120"
+        android:text="@string/welcome_text2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_36"
+        android:textStyle="bold" />
+</RelativeLayout>

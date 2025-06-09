@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_b3d5ff"
+    tools:context=".ui.activity.TienRepaymentAccountActivity">
+
+    <include
+        android:id="@+id/head_id"
+        layout="@layout/return_layout" />
+
+    <TextView
+        android:id="@+id/tv1_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/head_id"
+        android:layout_marginStart="@dimen/space_20"
+        android:layout_marginTop="@dimen/space_30"
+        android:layout_marginEnd="@dimen/space_20"
+        android:gravity="center"
+        android:text="@string/repayment3"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16" />
+
+    <LinearLayout
+        android:id="@+id/ll1_id"
+        android:layout_width="@dimen/space_180"
+        android:layout_height="@dimen/space_120"
+        android:layout_below="@id/tv1_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/space_30"
+        android:background="@drawable/shape_white_20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/space_55"
+            android:layout_height="@dimen/space_55"
+            android:src="@mipmap/repayment_account1" />
+
+        <TextView
+            android:id="@+id/tv2_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10"
+            android:gravity="center"
+            android:text="@string/repayment1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll2_id"
+        android:layout_width="@dimen/space_180"
+        android:layout_height="@dimen/space_120"
+        android:layout_below="@id/ll1_id"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:layout_marginTop="@dimen/space_10"
+        android:background="@drawable/shape_white_20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/space_55"
+            android:layout_height="@dimen/space_55"
+            android:src="@mipmap/repayment_account2" />
+
+        <TextView
+            android:id="@+id/tv3_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10"
+            android:gravity="center"
+            android:text="@string/repayment2"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_return"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_40"
+        android:layout_marginStart="@dimen/space_40"
+        android:layout_marginTop="@dimen/sp_10"
+        android:layout_marginEnd="@dimen/space_40"
+        android:layout_marginBottom="@dimen/space_60"
+        android:background="@drawable/shape_60a7fe_5dp_"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:text="@string/certificationOne16"
+        android:textColor="@color/color_60a7fe"
+        android:textSize="@dimen/sp_14" />
+</RelativeLayout>

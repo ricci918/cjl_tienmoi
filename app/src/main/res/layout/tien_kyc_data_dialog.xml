@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_5dp">
+
+    <TextView
+        android:id="@+id/tv1_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/space_20"
+        android:textColor="@color/color_60a7fe"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold" />
+
+    <DatePicker
+        android:id="@+id/date_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv1_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/space_20"
+        android:calendarViewShown="false"
+        android:theme="@style/android:Theme.Holo.Light.NoActionBar" />
+
+    <TextView
+        android:id="@+id/tv2_id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_35"
+        android:layout_below="@id/date_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/space_30"
+        android:layout_marginTop="@dimen/space_20"
+        android:layout_marginEnd="@dimen/space_30"
+        android:layout_marginBottom="@dimen/space_20"
+        android:background="@drawable/shape_60a7fe_5dp"
+        android:gravity="center"
+        android:text="@string/dialog24"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12" />
+</RelativeLayout>

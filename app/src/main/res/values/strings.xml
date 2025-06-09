@@ -1,0 +1,311 @@
+<resources>
+    <string name="app_name">TiềnMới</string>
+    <string name="welcome_text1">TiềnMới – Vay tiền \nnhanh, tiện lợi, an toàn.</string>
+    <string name="welcome_text2"><![CDATA[Vay nhanh<br/>gọn trong<br/>3 bước –<br/>Hạn mức lên<br/>đến <font color="#F8B62D">30 triệu!</font>]]></string>
+    <string name="login_text1">Đăng nhập</string>
+    <string name="login_text2">Dùng số điện thoại để đăng ký hoặc đăng nhập</string>
+    <string name="login_text3">Đăng nhập bằng OTP</string>
+    <string name="login_text4">Đăng nhập bằng mật khẩu</string>
+    <string name="login_text5">Số điện thoại</string>
+    <string name="login_text6">Nhập OTP</string>
+    <string name="login_text7">Lấy mã</string>
+    <string name="login_text8">Đăng nhập</string>
+    <string name="login_text9">Gặp khó khăn khi đăng nhập?\nHãy gọi ngay cho tổng đài hỗ trợ nhé!</string>
+    <string name="login_text10"><![CDATA[Bằng cách đăng ký hoặc đăng nhập,<br/>tôi đồng ý tuân thủ <font color="#0063DB">Chính sách quyền riêng tư.</font>]]></string>
+    <string name="confirmCertification1">Số tiền vay  (VND)</string>
+    <string name="confirmCertification2">Lãi suất năm</string>
+    <string name="confirmCertification3">Thời gian vay</string>
+    <string name="confirmCertification4">Vay ngay bây giờ</string>
+    <string name="confirmCertification5">Chúng tôi từ chối cho vay đối với người dưới 18 tuổi</string>
+    <string name="confirmCertification6">Đăng ký vay dễ dàng – 3 bước là xong</string>
+    <string name="confirmCertification7">Rút tiền linh hoạt</string>
+    <string name="confirmCertification8">Giải ngân nhanh</string>
+    <string name="confirmCertification9">Nền tảng này hứa hẹn sẽ bảo vệ tính bảo mật dữ liệu của\nbạn và sẽ không phổ biến thông tin cá nhân của bạn。</string>
+    <string name="certificationOne1">+5.000.000\nhạn mức</string>
+    <string name="certificationOne2">Bước 1:\nvui lòng hoàn thiện thông tin cơ bản của bạn.</string>
+    <string name="certificationOne3">Nhập họ và tên</string>
+    <string name="certificationOne4">Nhập số CMND/CCCD</string>
+    <string name="certificationOne5">Ngày sinh</string>
+    <string name="certificationOne6">Nhập họ và tên</string>
+    <string name="certificationOne7">Vui lòng chọn</string>
+    <string name="certificationOne8">Giới tính</string>
+    <string name="certificationOne9">Vui lòng điền trình độ học vấn của bạn.</string>
+    <string name="certificationOne10">Tình trạng hôn nhân</string>
+    <string name="certificationOne11">Facebook</string>
+    <string name="certificationOne12">zalo</string>
+    <string name="certificationOne13">Email</string>
+    <string name="certificationOne14">Lỗi nhập liệu</string>
+    <string name="certificationOne15">Bước tiếp theo</string>
+    <string name="certificationOne16">Quay lại</string>
+    <string name="certificationOne17">Vui lòng điền đầy đủ thông tin</string>
+    <string name="certificationOne18">Lỗi nhập liệu</string>
+    <string name="certificationTwo1">Bước 2:\nVui lòng hoàn thiện thông tin nghề nghiệp của bạn.</string>
+    <string name="certificationTwo2">Vui lòng điền nghề nghiệp của bạn.</string>
+    <string name="certificationTwo3">Tình hình thu nhập của bạn</string>
+    <string name="certificationTwo4">Vui lòng điền tên công ty.</string>
+    <string name="certificationTwo5">Số điện thoại nơi làm việc</string>
+    <string name="certificationTwo6">Hoàn thiện thông tin cư trú</string>
+    <string name="certificationTwo7">Vui lòng điền tỉnh/thành phố của bạn.</string>
+    <string name="certificationTwo8">Vui lòng điền quận/huyện của bạn.</string>
+    <string name="certificationTwo9">Vui lòng điền địa chỉ cụ thể của bạn.</string>
+    <string name="certificationTwo10">Thông tin gia đình hoặc người liên hệ</string>
+    <string name="certificationTwo11">Họ và tên người liên hệ khẩn cấp</string>
+    <string name="certificationTwo12">Số điện thoại người liên hệ khẩn cấp</string>
+    <string name="certificationTwo13">Mối quan hệ với người liên hệ khẩn cấp</string>
+    <string name="certificationTwo14">Họ và tên của người thân</string>
+    <string name="certificationTwo15">Số điện thoại của người thân</string>
+    <string name="certificationTwo16">Mối quan hệ với người thân</string>
+    <string name="certificationTwo17">+10.000.000\nhạn mức</string>
+    <string name="certificationThree1">Bước 3:\nVui lòng hoàn thiện thông tin thẻ ngân hàng.</string>
+    <string name="certificationThree2">Họ và tên</string>
+    <string name="certificationThree3">Chọn tên ngân hàng</string>
+    <string name="certificationThree4">Số tài khoản ngân hàng</string>
+    <string name="certificationThree5">Tải ảnh mặt trước CMND/CCCD rõ ràng.</string>
+    <string name="certificationThree6">Tải ảnh mặt sau CMND/CCCD rõ ràng.</string>
+    <string name="certificationThree7">Lưu ý:\nHãy đảm bảo ảnh rõ ràng để quá trình \nxét duyệt diễn ra nhanh hơn nhé!</string>
+    <string name="certificationThree8">Tải lên ảnh tự chụp khuôn mặt của bạn.</string>
+    <string name="certificationThree9">Vui lòng tải lên một bức ảnh rõ nét, chỉ hiển thị khuôn mặt của bạn trong điều kiện ánh sáng tốt. Để kết quả chính xác, vui lòng tránh để người khác hoặc vật thể xuất hiện trong ảnh. Nếu gặp sự cố, bạn có thể thử xoá và cài đặt lại ứng dụng, đồng thời kiểm tra và cấp đủ quyền cần thiết.</string>
+    <string name="certificationThree10">+15.000.000\nhạn mức</string>
+    <string name="LoanConfirmation1"><![CDATA[0812xxxx61 đã vay thành công <font color="#60A7FE">15.000.000</font>]]></string>
+    <string name="LoanConfirmation2"><![CDATA[0942xxxx51 đã vay thành công <font color="#60A7FE">20.000.000</font>]]></string>
+    <string name="LoanConfirmation3"><![CDATA[0332xxxx23 đã vay thành công <font color="#60A7FE">5.000.000</font>]]></string>
+    <string name="LoanConfirmation13"><![CDATA[0902xxxx82 đã vay thành công <font color="#60A7FE">8.000.000</font>]]></string>
+    <string name="LoanConfirmation4">Số tiền vay</string>
+    <string name="LoanConfirmation5">*Số tiền thực tế được giải ngân sẽ phụ thuộc\nvào tình hình tín dụng của bạn.</string>
+    <string name="LoanConfirmation6">Kỳ hạn vay </string>
+    <string name="LoanConfirmation7">Lãi suất</string>
+    <string name="LoanConfirmation8">Ngân hàng nhận tiền</string>
+    <string name="LoanConfirmation9">Số tài khoản ngân hàng</string>
+    <string name="LoanConfirmation10"><![CDATA[Nhấn ‘Đăng ký vay’ nghĩa là bạn đồng ý với<br/><font color="#0063DB">‘Hợp đồng vay’</font>.Giải ngân nhanh nếu được duyệt.]]></string>
+    <string name="LoanConfirmation11">Đăng ký vay</string>
+    <string name="LoanConfirmation12">Ngày</string>
+    <string name="operator1">Vui lòng chọn nhà mạng ủy quyền</string>
+    <string name="operator2">Viettel</string>
+    <string name="operator3">MoBiFone</string>
+    <string name="operator4">Vinaphone</string>
+    <string name="operator5">Vietnamobile</string>
+    <string name="operator6">SAYMEE</string>
+    <string name="operator7">Nhập vào ủy quyền</string>
+    <string name="operator8">Vui lòng nhận mã xác minh trước</string>
+    <string name="operator9">Số điện thoại</string>
+    <string name="operator10">Nhập mã xác minh</string>
+    <string name="operator11">Nhận mã xác minh</string>
+    <string name="operator12">Bước tiếp theo</string>
+    <string name="operator13">Cần lấy mã xác minh lần 2</string>
+    <string name="operator14">Sai, kiểm tra mã hoặc số điện thoại</string>
+    <string name="text_return">Quay lại</string>
+    <string name="main1">Vay của tôi</string>
+    <string name="main2">Thông báo</string>
+    <string name="main3">Của tôi</string>
+    <string name="min1">Thông tin cá nhân</string>
+    <string name="min2">Hủy tài khoản</string>
+    <string name="min3">Hotline：</string>
+    <string name="min4">Email hỗ trợ：</string>
+    <string name="min5">Đăng xuất</string>
+    <string name="min6">Cần sửa đổi liên hệ dịch vụ khách hàng</string>
+    <string name="min7">Liên hệ với dịch vụ khách hàng để xóa</string>
+    <string name="min8">Sao chép thành công</string>
+    <string name="dialog1">Chính sách quyền riêng tư</string>
+    <string name="dialog2">Đồng ý</string>
+    <string name="dialog3">Hủy bỏ</string>
+    <string name="dialog4">Tìm kiếm</string>
+    <string name="dialog5">Thu thập một số dữ liệu của bạn cho mục\nđích quản lý rủi ro và gian lận</string>
+    <string name="dialog6">·Máy ảnh</string>
+    <string name="dialog7">Đồng ý và tiếp tục</string>
+    <string name="dialog8">Sao chép</string>
+    <string name="dialog9">Sao chép thành công</string>
+    <string name="dialog10">Cảm ơn bạn đã phản hồi!</string>
+    <string name="dialog11">Chúc mừng! Bạn đã đăng ký khoản vay thành công.\n
+Bạn đánh giá thế nào về trải nghiệm với TiềnMới?
+</string>
+    <string name="dialog12">Để sau</string>
+    <string name="dialog13">Rất tiếc vì trải nghiệm chưa tốt.\n
+Hãy chia sẻ ý kiến để chúng tôi phục vụ bạn tốt hơn.\n
+Mọi phản hồi đều được trân trọng!
+</string>
+    <string name="dialog14">Gửi phản hồi</string>
+    <string name="dialog15">Để sau</string>
+    <string name="dialog16">Rất mong bạn dành tặng TiềnMới 5 sao trên Google Play!\n
+Mỗi đánh giá tích cực của bạn là nguồn động lực quý báu để chúng tôi không ngừng hoàn thiện dịch vụ và hỗ trợ bạn tốt hơn.
+</string>
+    <string name="dialog17">Gửi đánh giá</string>
+    <string name="dialog18">Không, cảm ơn</string>
+    <string name="dialog19">Góp ý của bạn giúp chúng tôi cải thiện dịch vụ.\n
+Gặp vấn đề gì? Hãy chia sẻ ngay nhé!
+
+</string>
+    <string name="dialog20">Nâng cấp phiên bản mới nhất để mở khóa thêm tính năng và ưu đãi giới hạn!</string>
+    <string name="dialog21">Đã có phiên bản mới, vui lòng cập nhật ngay để có trải nghiệm tốt hơn. Nâng cấp lên phiên bản mới nhất để mở khóa thêm nhiều tính năng và ưu đãi giới hạn!</string>
+    <string name="dialog22">Đang tải...</string>
+    <string name="dialog23">Đơn hàng đang được tạo, vui lòng chờ（%1$ds）....</string>
+    <string name="dialog24">Xác nhận</string>
+    <string name="fragment1">Bổ sung thông tin để tăng tỷ lệ phê duyệt</string>
+    <string name="fragment2">Đơn của bạn đang được xử lý nhanh chóng, hãy kiên nhẫn chờ một chút nhé!</string>
+    <string name="fragment3">Đang xét duyệt</string>
+    <string name="fragment4">Rất tiếc, hạn mức hiện tại đã hết. Mong bạn đợi %1$d ngày rồi nộp lại đơn nhé.</string>
+    <string name="fragment5">Hạn mức hiện tại đã được khôi phục, bạn có thể nộp đơn lại.</string>
+    <string name="fragment6">Không được phê duyệt</string>
+    <string name="fragment7">Chờ rút tiền</string>
+    <string name="fragment8">Chúc mừng! Khoản vay đã được duyệt! Nhấn \'Rút tiền\' để hệ thống xử lý ngay nhé!</string>
+    <string name="fragment9">Số tiền vay：</string>
+    <string name="fragment10">Đang giải ngân</string>
+    <string name="fragment11">Khoản vay của bạn đang được giải ngân, thời gian xử lý có thể mất vài phút.</string>
+    <string name="fragment12">Ngày phải trả：</string>
+    <string name="fragment13">Khoản vay quá hạn %1$d ngày. Vui lòng thanh toán để tránh phí phạt và ảnh hưởng sau này.</string>
+    <string name="fragment14">Số tiền phải trả：</string>
+    <string name="fragment15">Thanh toán ngay để nhận thêm sản phẩm và hạn mức vay cao hơn nhé!</string>
+    <string name="fragment16">Ngày thanh toán xong：</string>
+    <string name="fragment17">Cảm ơn bạn đã thanh toán. Lịch sử thanh toán tốt sẽ giúp nâng cao điểm tín dụng và hạn mức vay của bạn.</string>
+    <string name="fragment18">Đang xét duyệt</string>
+    <string name="fragment19">Đơn trả nợ</string>
+    <string name="fragment20">Đã hoàn trả</string>
+    <string name="fragment21">Bổ sung thông tin</string>
+    <string name="fragment22">Đăng ký lại</string>
+    <string name="fragment23">Chi tiết đơn hàng</string>
+    <string name="fragment24">Rút tiền</string>
+    <string name="fragment25">Hoàn trả</string>
+    <string name="fragment26">Xác thực thành công</string>
+    <string name="fragment27">Rút tiền thành công!</string>
+    <string name="fragment29">Rút tiền sớm để tránh đơn hết hạn!</string>
+    <string name="fragment28">Bước 1: Rút tiền
+\nVào “Đơn hàng” -“Kết quả phê duyệt”
+\nNhấn “Rút tiền” - Xác nhận, hệ thống sẽ chuyển ngay vào tài khoản của bạn
+\nBước 2: Thanh toán
+\nVào “Đơn hàng” - “Đơn trả nợ” - “Hoàn trả”
+\nChuyển khoản qua ngân hàng trực tuyến hoặc tại quầy ngân hàng/Viettel
+\nLưu ý: Trước khi chuyển khoản hoàn trả, vui lòng kiểm tra kỹ tài khoản nhận hiển thị trong ứng dụng, không chuyển tiền vào bất kỳ tài khoản cá nhân nào. Nếu gặp trường hợp đáng ngờ, hãy liên hệ ngay với bộ phận chăm sóc khách hàng qua email: support@tienmoivayonline.com.
+\nBước 3: Vay tiếp
+\nSau khi thanh toán, hệ thống tự động gửi đơn vay mới tới công ty tài chính
+\nGiữ thói quen trả đúng hạn để tăng điểm tín dụng và được duyệt hạn mức cao hơn
+\nNếu quý khách có bất kỳ không hài lòng nào về thái độ phục vụ của nhân viên chúng tôi trong quá trình vay, xin vui lòng gửi phản hồi về email: support@tienmoivayonline.com.</string>
+    <string name="repayment1">Tài khoản nhận tiền</string>
+    <string name="repayment2">Trả nợ trực tiếp</string>
+    <string name="repayment3">Vui lòng chọn “Tài khoản nhận tiền” để hoàn trả khoản vay. Việc thanh toán sớm có thể giúp tăng hạn mức vay và hỗ trợ vay lại nhanh chóng.</string>
+    <string name="repayment4">Quay lại</string>
+    <string name="repayment5">Số tiền phải trả</string>
+    <string name="repayment6">Số tiền gốc phải trả</string>
+    <string name="repayment7">Phí quản lý tài khoản</string>
+    <string name="repayment8">Phí xét duyệt</string>
+    <string name="repayment9">Phí dịch vụ</string>
+    <string name="repayment10">Lãi suất</string>
+    <string name="repayment11">Phí xử lý</string>
+    <string name="repayment12">Phí phạt trả chậm</string>
+    <string name="repayment13">Trả ngay để hoàn tất</string>
+    <string name="repayment14">Tên người nhận：</string>
+    <string name="repayment15">Số tài khoản：</string>
+    <string name="repayment16">Ngân hàng：</string>
+    <string name="repayment17">Lưu ý: Vui lòng chỉ chuyển khoản đến tài khoản được chỉ định duy nhất ở trên. Khi chuyển khoản, hãy kiểm tra chính xác tên người nhận và số tài khoản.
+Khi hoàn trả khoản vay, bắt buộc ghi rõ họ tên và số điện thoại của bạn trong phần nội dung chuyển khoản.
+</string>
+    <string name="repayment18">Bạn có thể sử dụng thông tin trên để trả nợ tại ngân hàng gần nhất hoặc thông qua Ngân hàng Internet. \nCác giao dịch ngân hàng có thể bị tạm dừng vào thứ Bảy, Chủ Nhật và ngày lễ, vì vậy vui lòng sắp xếp việc thanh toán của bạn một cách hợp lý để tránh thanh toán quá hạn vì lý do này.</string>
+    <string name="orderDetails1">Số tiền vay</string>
+    <string name="orderDetails2">Số tiền nhận được</string>
+    <string name="orderDetails3">Phí quản lý tài khoản</string>
+    <string name="orderDetails4">Phí xét duyệt</string>
+    <string name="orderDetails5">Phí dịch vụ</string>
+    <string name="orderDetails6">Lãi suất</string>
+    <string name="orderDetails7">Phí xử lý</string>
+    <string name="orderDetails8">Kỳ hạn vay</string>
+    <string name="orderDetails9">Tổng tiền phải trả</string>
+    <string name="orderDetails10">Chi tiết đơn hàng</string>
+    <string name="orderDetails11">Phí phạt trả chậm</string>
+    <string name="orderDetails12">Ngày đáo hạn</string>
+    <string name="orderDetails13">ngày</string>
+    <string name="orderDetails14">Đang giải ngân</string>
+    <string name="orderDetails15">Tài khoản nhận tiền</string>
+    <string name="orderDetails16">Số đuôi（%1$s）</string>
+    <string name="faceId">1609019376427960</string>
+    <string name="faceToken">2047afa43a54298b0b28daac9c76880f</string>
+    <string name="loanContract"><![CDATA[TIỀNMỚI
+<br/>Thỏa Thuận Vay
+<br/>Để bảo vệ quyền lợi hợp pháp của Quý khách, vui lòng đọc kỹ Thỏa thuận vay này. Việc nhấp vào “Đồng ý” và đăng ký khoản vay đồng nghĩa với việc Quý khách đã đọc, hiểu và chấp nhận toàn bộ điều khoản trong Thỏa thuận, đồng thời cam kết chịu mọi trách nhiệm pháp lý liên quan. Nếu không đồng ý, vui lòng ngừng sử dụng dịch vụ ngay lập tức.
+
+<br/>Thỏa thuận này được ký kết vào ngày <font color="#D21E1E">%1$s</font> giữa các bên sau:
+<br/>Công ty cho vay:
+<br/>TIỀNMỚI (do WILDISH \'S BRUNCH &#8230;; BAKES LTD sở hữu và vận hành), là một pháp nhân được thành lập và hoạt động hợp pháp, có địa chỉ đăng ký tại:
+<br/>1 The Parade,MINEHEAD - TA24 5NL,United Kingdom
+<br/>Người vay: <font color="#D21E1E">%2$s</font> — <font color="#D21E1E">%3$s</font>
+<br/>Bên cho vay đồng ý cấp khoản vay cho Bên vay theo các điều khoản và điều kiện được quy định cụ thể trong Thỏa thuận này.
+<br/>1. Số Tiền Vay và Chi Phí
+<br/>1.1 Bên Cho Vay sẽ cấp cho Bên Vay một khoản vay với số tiền gốc là <font color="#D21E1E">%4$s</font> đồng Việt Nam (VND), theo các điều kiện cụ thể sau:
+<br/>1.1.1 Lãi suất: áp dụng mức lãi suất <font color="#D21E1E">%5$s</font> %% mỗi ngày, tính trên số dư nợ gốc chưa thanh toán.
+<br/>1.1.2 Phương thức thanh toán: Bên Vay phải thanh toán toàn bộ số tiền gốc và lãi theo hướng dẫn được nêu rõ trong đơn đăng ký trước thời điểm đáo hạn.
+<br/>1.1.3 Thời hạn vay: khoản vay có hiệu lực trong vòng <font color="#D21E1E">%6$s</font> ngày kể từ ngày giải ngân.
+<br/>1.1.4 Phí dịch vụ: Bao gồm nhưng không giới hạn ở các khoản như phí xử lý hồ sơ, phí hỗ trợ kỹ thuật và các khoản phí tài chính khác liên quan đến khoản vay.
+<br/>1.2 Khoản vay sẽ được giải ngân thông qua hình thức chuyển khoản ngân hàng trực tuyến và có thể mất một khoảng thời gian nhất định để hoàn tất. Sau khi giải ngân thành công, hệ thống sẽ gửi thông báo qua tin nhắn SMS đến số điện thoại đã đăng ký của Bên Vay.
+<br/>1.3 Việc nhận tiền vay có thể được thực hiện qua chuyển khoản ngân hàng trực tuyến hoặc nhận tiền mặt trực tiếp. Trường hợp Bên Vay chọn nhận tiền mặt, đơn vị chi trả có thể áp dụng phí giao dịch riêng tùy theo chính sách của họ.
+<br/>1.4 Trong trường hợp Bên Vay chọn phương thức nhận tiền mặt trực tiếp, sau khi hồ sơ được duyệt, Bên Cho Vay sẽ gửi mã giao dịch cho Bên Vay. Mã này chỉ có hiệu lực trong thời gian quy định. Nếu Bên Vay không hoàn tất quy trình nhận tiền trong thời hạn đó, đơn vay sẽ bị coi là hủy bỏ tự động.
+<br/>2. Cơ Cấu Lại / Gia Hạn / Tái Cấp Vốn
+<br/>Bên vay chỉ được cơ cấu lại, gia hạn hoặc tái cấp vốn khoản vay nếu có sự đồng ý bằng văn bản từ đại diện hợp pháp của Bên cho vay và cam kết tuân thủ các chính sách nội bộ. Mọi chi phí phát sinh sẽ do Bên vay chịu trách nhiệm.
+
+<br/>3. Tiêu Chuẩn Đủ Điều Kiện
+<br/>Việc giải ngân khoản vay chỉ được thực hiện sau khi Bên cho vay hoàn tất xác minh danh tính và thông tin liên quan của Bên vay. Nếu không đáp ứng điều kiện, khoản vay sẽ bị từ chối và Thỏa thuận này tự động vô hiệu, không cần thông báo thêm.
+
+<br/>4. Giải Ngân Khoản Vay
+<br/>Khoản vay sẽ được chuyển vào tài khoản ngân hàng do Bên vay cung cấp. Bên cho vay không chịu trách nhiệm nếu thông tin sai dẫn đến giải ngân nhầm. Trường hợp chậm trễ hoặc lỗi do bên thứ ba, Bên cho vay không chịu trách nhiệm.
+
+<br/>5. Vi Phạm và Xử Lý
+<br/>Bên cho vay có quyền yêu cầu thanh toán ngay toàn bộ khoản vay nếu xảy ra một trong các trường hợp sau:
+<br/>Bên vay vi phạm điều khoản Thỏa thuận;
+<br/>Không thanh toán đúng hạn;
+<br/>Có hành vi gian lận, kê khai sai thông tin;
+<br/>Bị khởi kiện, kê biên, phá sản hoặc mất năng lực tài chính;
+<br/>Bị kết án hình sự liên quan đến tài sản;
+<br/>Qua đời hoặc bị sự kiện bất khả kháng ảnh hưởng khả năng trả nợ.
+
+<br/>6. Hậu Quả Vi Phạm
+<br/>Nếu Bên vay vi phạm:
+<br/>Tài khoản sẽ bị đánh dấu quá hạn, áp dụng phí phạt (xem Điều 7);
+<br/>Có thể bị từ chối khoản vay tiếp theo;
+<br/>Chứng từ do Bên cho vay cung cấp được xem là bằng chứng ban đầu về số nợ;
+<br/>Bên cho vay có thể ủy quyền cho bên thứ ba thu hồi nợ.
+
+<br/>7. Phí Phạt Trễ Hạn
+<br/>Nếu quá hạn thanh toán:
+<br/>Áp dụng phí phạt hàng ngày: 10%%/ngày trên số tiền gốc;
+<br/>8. Thu Hồi Nợ
+<br/>Khi Bên vay quá hạn:
+<br/>Đơn vị thu hồi nợ được ủy quyền sẽ thực hiện truy vết và nhắc nhở thanh toán;
+<br/>Mọi chi phí phát sinh do việc thu hồi sẽ do Bên vay chịu.
+
+<br/>9. Quy Trình Thu Hồi Nợ
+<br/>Sau khi đến hạn, đơn vị thu hồi sẽ liên hệ trực tiếp với Bên vay để nhắc nhở thanh toán;
+<br/>Nếu không thể liên lạc, họ sẽ liên hệ với người liên hệ khẩn cấp mà Bên vay đã cung cấp;
+<br/>Thông tin khoản vay có thể được tiết lộ trong quá trình này theo ủy quyền của Bên vay trong Thỏa thuận.
+
+<br/>10. Bảo Mật Dữ Liệu
+<br/>10.1 Cam kết từ Bên vay:
+<br/>Đồng ý cho phép Bên cho vay xử lý dữ liệu cá nhân và dữ liệu nhạy cảm;
+<br/>Đồng ý việc sử dụng dữ liệu cho mục đích xét duyệt, quản lý và thu hồi khoản vay;
+<br/>Cam kết bảo vệ dữ liệu cá nhân khỏi rò rỉ, mất mát, hoặc lạm dụng.
+<br/>10.2 Cam kết từ Bên cho vay:
+<br/>Lưu trữ dữ liệu cá nhân trong thời gian cần thiết phục vụ mục đích hợp pháp;
+<br/>Có thể kéo dài thời gian lưu trữ để tuân thủ yêu cầu pháp lý và vận hành;
+<br/>Việc xử lý dữ liệu tuân thủ theo Luật Bảo vệ Dữ liệu Cá nhân Việt Nam.
+
+<br/>11. Hiệu Lực Từng Phần
+<br/>Nếu bất kỳ điều khoản nào trong Thỏa thuận này bị coi là vô hiệu hoặc không hợp pháp:
+<br/>Các điều khoản còn lại vẫn giữ nguyên hiệu lực;
+<br/>Không ảnh hưởng đến quyền lợi hợp pháp của Bên cho vay và bên thu hồi nợ.
+<br/>12. Thuế và Phí
+<br/>Bên vay tự chịu trách nhiệm thanh toán tất cả các khoản thuế và phí liên quan đến Thỏa thuận này, bao gồm hiện tại và phát sinh trong tương lai.
+<br/>13. Chuyển Nhượng Quyền Lợi
+<br/>Bên vay đồng ý rằng:
+<br/>Bên cho vay có toàn quyền chuyển nhượng một phần hoặc toàn bộ quyền và nghĩa vụ trong Thỏa thuận này;
+<br/>Việc chuyển nhượng có thể thực hiện cho bất kỳ bên thứ ba nào do Bên cho vay chỉ định;
+<br/>Không cần thông báo hoặc được sự đồng ý trước từ Bên vay.
+
+<br/>Xác Nhận và Cam Kết
+<br/>Tôi, người vay, xác nhận rằng:
+<br/>Tôi đã đọc kỹ và đồng ý với toàn bộ nội dung Thỏa thuận vay này trước khi nộp đơn;
+<br/>Tôi cam kết chịu trách nhiệm pháp lý theo các điều khoản đã nêu;
+<br/>Số điện thoại đăng ký khoản vay là của tôi và do tôi sử dụng;
+<br/>Mọi thông tin tôi cung cấp là chính xác và trung thực;
+<br/>Tôi đồng ý cho Bên cho vay thu thập và xử lý dữ liệu liên quan đến đơn vay, bao gồm cả trường hợp bị từ chối;
+<br/>Nếu có khác biệt giữa thông tin Thỏa thuận này và hồ sơ lưu trữ, tôi đồng ý dùng Thỏa thuận này làm căn cứ cập nhật;
+<br/>Tôi sẽ thông báo kịp thời nếu có thay đổi về số điện thoại cá nhân, gia đình hoặc nơi làm việc.
+
+<br/>Ngày nộp đơn: <font color="#D21E1E">%7$s</font>
+<br/><font color="#D21E1E">%8$s</font> xác nhận đã đọc và đồng ý toàn bộ Thỏa thuận này thông qua ký điện tử.]]>
+    </string>
+</resources>

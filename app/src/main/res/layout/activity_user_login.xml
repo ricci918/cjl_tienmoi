@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bj1"
+    tools:context=".ui.activity.TienUserLoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl1_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20"
+        android:layout_marginTop="@dimen/space_100"
+        android:layout_marginEnd="@dimen/space_20"
+        android:background="@drawable/shape_white_5dp">
+
+        <TextView
+            android:id="@+id/tv1_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space_30"
+            android:text="@string/login_text1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv2_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv1_id"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space_10"
+            android:text="@string/login_text2"
+            android:textSize="@dimen/sp_12" />
+
+        <ImageView
+            android:id="@+id/iv1_id"
+            android:layout_width="@dimen/space_22"
+            android:layout_height="@dimen/space_25"
+            android:layout_below="@id/tv2_id"
+            android:layout_marginStart="@dimen/space_30"
+            android:layout_marginTop="@dimen/space_30"
+            android:src="@mipmap/login_image2" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_25"
+            android:layout_below="@id/tv2_id"
+            android:layout_marginEnd="@dimen/space_30"
+            android:paddingStart="@dimen/space_10"
+            android:layout_marginTop="@dimen/space_30"
+            android:layout_toEndOf="@id/iv1_id"
+            android:background="@null"
+            android:hint="@string/login_text5"
+            android:inputType="number"
+            android:maxLength="10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_12" />
+
+        <View
+            android:id="@+id/v1_id"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_1"
+            android:layout_below="@id/et_phone"
+            android:layout_marginStart="@dimen/space_30"
+            android:layout_marginTop="@dimen/space_5"
+            android:layout_marginEnd="@dimen/space_30"
+            android:background="@color/black" />
+
+        <ImageView
+            android:id="@+id/iv2_id"
+            android:layout_width="@dimen/space_22"
+            android:layout_height="@dimen/space_25"
+            android:layout_below="@id/v1_id"
+            android:layout_marginStart="@dimen/space_30"
+            android:layout_marginTop="@dimen/space_30"
+            android:src="@mipmap/login_image1" />
+
+        <EditText
+            android:id="@+id/et_otp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_25"
+            android:layout_below="@id/v1_id"
+            android:layout_marginStart="@dimen/space_10"
+            android:layout_marginTop="@dimen/space_30"
+            android:layout_toEndOf="@id/iv2_id"
+            android:layout_toStartOf="@id/tv3_id"
+            android:background="@null"
+            android:maxLength="6"
+            android:hint="@string/login_text6"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tv3_id"
+            android:layout_width="@dimen/space_70"
+            android:layout_height="@dimen/space_35"
+            android:layout_below="@id/v1_id"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/space_20"
+            android:layout_marginEnd="@dimen/space_30"
+            android:background="@drawable/shape_60a7fe_5dp"
+            android:gravity="center"
+            android:text="@string/login_text7"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12" />
+
+        <View
+            android:id="@+id/v2_id"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_1"
+            android:layout_below="@id/et_otp"
+            android:layout_marginStart="@dimen/space_30"
+            android:layout_marginTop="@dimen/space_5"
+            android:layout_marginEnd="@dimen/space_30"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/tv4_id"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_35"
+            android:layout_below="@id/v2_id"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/space_30"
+            android:layout_marginTop="@dimen/space_50"
+            android:layout_marginEnd="@dimen/space_30"
+            android:layout_marginBottom="@dimen/space_50"
+            android:background="@drawable/shape_60a7fe_5dp"
+            android:gravity="center"
+            android:text="@string/login_text8"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv5_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl1_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/space_40"
+        android:gravity="center"
+        android:text="@string/login_text9"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_12" />
+
+    <LinearLayout
+        android:id="@+id/ll_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv5_id"
+        android:layout_marginTop="@dimen/space_30"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv3_id"
+            android:layout_width="@dimen/space_22"
+            android:layout_height="@dimen/space_22"
+            android:layout_marginEnd="@dimen/space_3"
+            android:src="@mipmap/login_image3" />
+
+        <TextView
+            android:id="@+id/tv6_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_12" />
+
+        <ImageView
+            android:id="@+id/iv4_id"
+            android:layout_width="@dimen/space_22"
+            android:layout_height="@dimen/space_22"
+            android:layout_marginStart="@dimen/space_10"
+            android:layout_marginEnd="@dimen/space_3"
+            android:src="@mipmap/login_image4" />
+
+        <TextView
+            android:id="@+id/tv7_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv8_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/space_30"
+        android:gravity="center"
+        android:text="@string/login_text10"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_10" />
+</RelativeLayout>

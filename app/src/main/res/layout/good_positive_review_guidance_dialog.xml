@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_5dp">
+
+    <TextView
+        android:id="@+id/tv1_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20"
+        android:layout_marginTop="@dimen/space_30"
+        android:layout_marginEnd="@dimen/space_20"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/space_5"
+        android:text="@string/dialog11"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold" />
+
+    <RatingBar
+        android:id="@+id/rb_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv1_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/space_20"
+        android:numStars="5"
+        android:stepSize="0.5"
+        android:theme="@style/RatingBar" />
+
+    <TextView
+        android:id="@+id/tv2_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rb_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/space_20"
+        android:layout_marginTop="@dimen/space_30"
+        android:layout_marginEnd="@dimen/space_20"
+        android:layout_marginBottom="@dimen/space_30"
+        android:gravity="center"
+        android:text="@string/dialog12"
+        android:textColor="#B7B7B7"
+        android:textSize="@dimen/sp_14"
+        android:textStyle="bold" />
+</RelativeLayout>

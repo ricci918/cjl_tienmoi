@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_white_5dp">
+
+    <TextView
+        android:id="@+id/tv1_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/space_20"
+        android:textColor="@color/color_60a7fe"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et1_id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_35"
+        android:layout_below="@id/tv1_id"
+        android:layout_marginStart="@dimen/space_10"
+        android:layout_marginTop="@dimen/space_5"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/shape_f2f2f2_5dp"
+        android:drawableEnd="@mipmap/ss"
+        android:hint="@string/dialog4"
+        android:inputType="text"
+        android:paddingStart="@dimen/space_14"
+        android:paddingTop="@dimen/space_9"
+        android:paddingEnd="@dimen/space_14"
+        android:paddingBottom="@dimen/space_9"
+        android:textSize="@dimen/sp_12" />
+    <!--        app:wheel_visibleItemCount="7" />-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_id"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/et1_id"
+        android:layout_marginStart="@dimen/space_10"
+        android:layout_marginTop="@dimen/space_10"
+        android:layout_marginEnd="@dimen/space_10" />
+</RelativeLayout>

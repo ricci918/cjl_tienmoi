@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bj1"
+    tools:context=".ui.activity.TienConfirmCertificationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl1_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_20"
+            android:layout_marginTop="@dimen/space_100"
+            android:layout_marginEnd="@dimen/space_20"
+            android:background="@drawable/shape_white_5dp">
+
+            <TextView
+                android:id="@+id/tv1_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/space_50"
+                android:text="@string/confirmCertification1"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv2_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv1_id"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/space_20"
+                android:text="₫ 30,000,000"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_30"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/sr_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv2_id"
+                android:max="30000000"
+                android:min="0"
+                android:progress="30000000"
+                android:layout_marginStart="@dimen/space_30"
+                android:layout_marginTop="@dimen/space_20"
+                android:layout_marginEnd="@dimen/space_30" />
+
+            <TextView
+                android:id="@+id/tv3_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sr_id"
+                android:layout_alignStart="@id/sr_id"
+                android:layout_marginTop="@dimen/space_40"
+                android:text="@string/confirmCertification2"
+                android:textSize="@dimen/sp_10" />
+
+            <TextView
+                android:id="@+id/tv4_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv3_id"
+                android:layout_alignStart="@id/sr_id"
+                android:layout_marginTop="@dimen/space_5"
+                android:text="3%-12%"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+
+            <View
+                android:id="@+id/v2_id"
+                android:layout_width="@dimen/space_1"
+                android:layout_height="@dimen/space_42"
+                android:layout_below="@id/tv2_id"
+                android:layout_alignTop="@id/tv3_id"
+                android:layout_alignBottom="@id/tv4_id"
+                android:layout_centerHorizontal="true"
+                android:background="@color/color_60a7fe" />
+
+            <TextView
+                android:id="@+id/tv5_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sr_id"
+                android:layout_alignEnd="@id/sr_id"
+                android:layout_marginTop="@dimen/space_40"
+                android:text="@string/confirmCertification3"
+                android:textSize="@dimen/sp_10" />
+
+            <TextView
+                android:id="@+id/tv6_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv3_id"
+                android:layout_alignEnd="@id/sr_id"
+                android:layout_marginTop="@dimen/space_5"
+                android:text="91-365ngày"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv7_id"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_35"
+                android:layout_below="@id/tv6_id"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/space_30"
+                android:layout_marginTop="@dimen/space_20"
+                android:layout_marginEnd="@dimen/space_30"
+                android:background="@drawable/shape_60a7fe_5dp"
+                android:gravity="center"
+                android:text="@string/confirmCertification4"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv8_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv7_id"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/space_20"
+                android:layout_marginBottom="@dimen/space_50"
+                android:text="@string/confirmCertification5"
+                android:textSize="@dimen/sp_10" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv9_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl1_id"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space_20"
+
+            android:text="@string/confirmCertification6"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/ll_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv9_id"
+            android:layout_alignStart="@id/rl1_id"
+            android:layout_alignEnd="@id/rl1_id">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_20"
+                android:layout_marginEnd="@dimen/space_30"
+                android:layout_weight="1"
+                android:background="@drawable/shape_white_10dp"
+                android:padding="@dimen/space_20">
+
+                <ImageView
+                    android:id="@+id/iv1_id"
+                    android:layout_width="@dimen/space_50"
+                    android:layout_height="@dimen/space_50"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/confirm_certification1" />
+
+                <TextView
+                    android:id="@+id/tv10_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv1_id"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/space_5"
+                    android:text="@string/confirmCertification7"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_10" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_20"
+                android:layout_weight="1"
+                android:background="@drawable/shape_white_10dp"
+                android:padding="@dimen/space_20">
+
+                <ImageView
+                    android:id="@+id/iv2_id"
+                    android:layout_width="@dimen/space_50"
+                    android:layout_height="@dimen/space_50"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/confirm_certification2" />
+
+                <TextView
+                    android:id="@+id/tv11_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv2_id"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/space_5"
+                    android:text="@string/confirmCertification8"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_10" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv12_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_id"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space_20"
+            android:layout_marginBottom="@dimen/space_80"
+            android:text="@string/confirmCertification9"
+            android:textSize="@dimen/sp_10" />
+    </RelativeLayout>
+
+
+</ScrollView>
