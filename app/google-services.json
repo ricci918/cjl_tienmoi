@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "698125969779",
+    "project_id": "tienmoi-44a82",
+    "storage_bucket": "tienmoi-44a82.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698125969779:android:896f1b601267cf5e9dfd06",
+        "android_client_info": {
+          "package_name": "com.tienmoi.vayonline.nhanh"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5vap-9qnp0NI8dOF5guY61JXTLYi2m6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

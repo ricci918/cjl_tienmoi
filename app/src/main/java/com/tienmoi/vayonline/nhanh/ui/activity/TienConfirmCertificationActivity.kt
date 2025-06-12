@@ -1,6 +1,7 @@
 package com.tienmoi.vayonline.nhanh.ui.activity
 
 import android.Manifest
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.SeekBar
@@ -26,15 +27,28 @@ class TienConfirmCertificationActivity : TienBaseActivityNoData() {
         mBinding.apply {
             if (TienSharedPreferencesUtil.isTienFirstInstall()) {
                 TienPrivacyDialog.showTienPrivacyDialog(this@TienConfirmCertificationActivity) {
-                    AndPermission.with(this@TienConfirmCertificationActivity)
-                        .permission(Manifest.permission.ACCESS_COARSE_LOCATION)
-                        .onGranted {
-                            TienSharedPreferencesUtil.putTienIsFirstInstall(false)
-                        }
-                        .onDenied {
-                            TienSharedPreferencesUtil.putTienIsFirstInstall(false)
-                        }
-                        .start()
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                        AndPermission.with(this@TienConfirmCertificationActivity)
+                            .permission(Manifest.permission.ACCESS_COARSE_LOCATION)
+                            .permission(Manifest.permission.POST_NOTIFICATIONS)
+                            .onGranted {
+                                TienSharedPreferencesUtil.putTienIsFirstInstall(false)
+                            }
+                            .onDenied {
+                                TienSharedPreferencesUtil.putTienIsFirstInstall(false)
+                            }
+                            .start()
+                    } else {
+                        AndPermission.with(this@TienConfirmCertificationActivity)
+                            .permission(Manifest.permission.ACCESS_COARSE_LOCATION)
+                            .onGranted {
+                                TienSharedPreferencesUtil.putTienIsFirstInstall(false)
+                            }
+                            .onDenied {
+                                TienSharedPreferencesUtil.putTienIsFirstInstall(false)
+                            }
+                            .start()
+                    }
                 }
 
             }
@@ -54,7 +68,7 @@ class TienConfirmCertificationActivity : TienBaseActivityNoData() {
                 override fun onStartTrackingTouch(seekBar: SeekBar) {}
 
                 override fun onStopTrackingTouch(seekBar: SeekBar) {
-                    tv2Id.text = "₫ "+TienSystemUtil.addTienComma(seekBar.progress.toString())
+                    tv2Id.text = "₫ " + TienSystemUtil.addTienComma(seekBar.progress.toString())
                 }
             })
 

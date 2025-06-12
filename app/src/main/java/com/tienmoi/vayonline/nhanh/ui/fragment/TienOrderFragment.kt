@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.tienmoi.vayonline.nhanh.R
 import com.tienmoi.vayonline.nhanh.app.TienMyApplication
 import com.tienmoi.vayonline.nhanh.base.BaseFragment
-import com.tienmoi.vayonline.nhanh.base.TienUpDateService
+import com.tienmoi.vayonline.nhanh.service.TienUpDateService
 import com.tienmoi.vayonline.nhanh.databinding.FragmentOrderBinding
 import com.tienmoi.vayonline.nhanh.model.contract.TienOrderFragmentContract
 import com.tienmoi.vayonline.nhanh.model.data.TienAcquisitionReq

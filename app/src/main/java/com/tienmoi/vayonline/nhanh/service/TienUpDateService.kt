@@ -1,4 +1,4 @@
-package com.tienmoi.vayonline.nhanh.base
+package com.tienmoi.vayonline.nhanh.service
 
 import android.app.Service
 import android.content.Intent

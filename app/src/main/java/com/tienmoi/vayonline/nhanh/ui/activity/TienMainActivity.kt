@@ -1,9 +1,12 @@
 package com.tienmoi.vayonline.nhanh.ui.activity
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.messaging.FirebaseMessaging
 import com.tienmoi.vayonline.nhanh.base.TienBaseActivityNoData
 import com.tienmoi.vayonline.nhanh.databinding.ActivityMainBinding
 import com.tienmoi.vayonline.nhanh.model.utils.TienSharedPreferencesUtil
