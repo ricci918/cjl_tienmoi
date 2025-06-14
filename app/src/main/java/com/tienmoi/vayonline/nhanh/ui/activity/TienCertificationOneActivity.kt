@@ -11,6 +11,7 @@ import com.tienmoi.vayonline.nhanh.model.contract.TienCertificationOneContract
 import com.tienmoi.vayonline.nhanh.model.data.TienAddBasicInfoReq
 import com.tienmoi.vayonline.nhanh.model.data.TienUserFieldCodeData
 import com.tienmoi.vayonline.nhanh.model.utils.TienSharedPreferencesUtil
+import com.tienmoi.vayonline.nhanh.model.utils.TienSystemUtil
 import com.tienmoi.vayonline.nhanh.model.utils.TienToastUtil
 import com.tienmoi.vayonline.nhanh.presenter.TienCertificationOnePresenter
 import com.tienmoi.vayonline.nhanh.ui.dialog.TienKycDialog
@@ -76,6 +77,9 @@ class TienCertificationOneActivity :
             }
             tvReturn.setOnClickListener { finish() }
             tvNextStep.setOnClickListener {
+                if (TienSystemUtil.isFastClick(800)) {
+                    return@setOnClickListener
+                }
                 if (et1Id.text.toString() != "" && et2Id.text.toString() != "" && et3Id.text.toString() != "" && sexValue != -1 && educationValue != -1 && marriageValue != -1 && et7Id.text.toString() != "" && et8Id.text.toString() != "" && isLocalEmail) {
                     showLoading()
                     presenter?.getTienAddBasicInfo(

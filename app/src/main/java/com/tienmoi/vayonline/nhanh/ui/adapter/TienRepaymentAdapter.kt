@@ -95,6 +95,9 @@ class TienRepaymentAdapter(
                 }
 
                 button1.setOnClickListener {
+                    if (TienSystemUtil.isFastClick(800)) {
+                        return@setOnClickListener
+                    }
                     if (button1.text.toString() == context.getString(R.string.fragment25)) {//还款
                         val intent = Intent(context, TienRepaymentAccountActivity::class.java)
                         intent.putExtra(TienSystemUtil.ORDER_CODE, it1.MICYPp9)
@@ -102,6 +105,9 @@ class TienRepaymentAdapter(
                     }
                 }
                 button2.setOnClickListener {
+                    if (TienSystemUtil.isFastClick(800)) {
+                        return@setOnClickListener
+                    }
                     if (button2.text.toString() == context.getString(R.string.fragment21)) {//运行商
                         val intent = Intent(context, TienOperatorSelectActivity::class.java)
                         context.startActivity(intent)
@@ -112,9 +118,15 @@ class TienRepaymentAdapter(
                     }
                 }
                 zalo.setOnClickListener {
+                    if (TienSystemUtil.isFastClick(800)) {
+                        return@setOnClickListener
+                    }
                     TienZaloDialog.showZaloDialog(activity, it1.U4ssv5u)
                 }
                 phone.setOnClickListener {
+                    if (TienSystemUtil.isFastClick(800)) {
+                        return@setOnClickListener
+                    }
                     val intent = Intent(
                         Intent.ACTION_DIAL,
                         ("tel:" + it1.U4ssv5u).toUri()

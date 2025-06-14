@@ -197,6 +197,9 @@ class TienOrderAdapter(
                     }
                 }
                 button2.setOnClickListener {
+                    if (TienSystemUtil.isFastClick(800)) {
+                        return@setOnClickListener
+                    }
                     if (button2.text.toString() == context.getString(R.string.fragment24)) { //提现
                         onSelectedListener.invoke(it1.Ihr8GkY, TienSystemUtil.TWO_VALUE)
                     }
@@ -207,6 +210,9 @@ class TienOrderAdapter(
                     }
                 }
                 button1.setOnClickListener {
+                    if (TienSystemUtil.isFastClick(800)) {
+                        return@setOnClickListener
+                    }
                     if (button1.text.toString() == context.getString(R.string.fragment23)) {
                         val intent = Intent(context, TienOrderDetailsActivity::class.java)
                         intent.putExtra(TienSystemUtil.ORDER_CODE, it1.Ihr8GkY)
@@ -217,13 +223,22 @@ class TienOrderAdapter(
                 }
 
                 operator.setOnClickListener {
+                    if (TienSystemUtil.isFastClick(800)) {
+                        return@setOnClickListener
+                    }
                     val intent = Intent(context, TienOperatorSelectActivity::class.java)
                     context.startActivity(intent)
                 }
                 zalo.setOnClickListener {
+                    if (TienSystemUtil.isFastClick(800)) {
+                        return@setOnClickListener
+                    }
                     TienZaloDialog.showZaloDialog(activity, it1.Zy5DsZG)
                 }
                 phone.setOnClickListener {
+                    if (TienSystemUtil.isFastClick(800)) {
+                        return@setOnClickListener
+                    }
                     val intent = Intent(
                         Intent.ACTION_DIAL,
                         ("tel:" + it1.Zy5DsZG).toUri()

@@ -80,6 +80,9 @@ class TienCertificationThreeActivity :
             }
 
             iv2Id.setOnClickListener {
+                if (TienSystemUtil.isFastClick(800)) {
+                    return@setOnClickListener
+                }
                 if (!needReq) {
                     TienKycDialog.showTienCameraDialog(this@TienCertificationThreeActivity) {
                         AndPermission.with(this@TienCertificationThreeActivity)
@@ -100,6 +103,9 @@ class TienCertificationThreeActivity :
             }
 
             iv4Id.setOnClickListener {
+                if (TienSystemUtil.isFastClick(800)) {
+                    return@setOnClickListener
+                }
                 if (!needReq) {
                     TienKycDialog.showTienCameraDialog(this@TienCertificationThreeActivity) {
                         AndPermission.with(this@TienCertificationThreeActivity)
@@ -120,6 +126,9 @@ class TienCertificationThreeActivity :
             }
 
             iv6Id.setOnClickListener {
+                if (TienSystemUtil.isFastClick(800)) {
+                    return@setOnClickListener
+                }
                 if (!needReq) {
                     TienKycDialog.showTienCameraDialog(this@TienCertificationThreeActivity) {
                         AndPermission.with(this@TienCertificationThreeActivity)
@@ -138,6 +147,9 @@ class TienCertificationThreeActivity :
                 }
             }
             tvNextStep.setOnClickListener {
+                if (TienSystemUtil.isFastClick(800)) {
+                    return@setOnClickListener
+                }
                 if (et3Id.text.toString() != "" && et2Id.text.toString() != "" && imageOneNumber != 0.0 && imageTwoNumber != 0.0 && imageThreeNumber != 0.0) {
                     if (TienSharedPreferencesUtil.getSystemInfoData()?.XKruWxQ == true) {
                         if (TienSharedPreferencesUtil.getSystemInfoData()?.hGkzoMf == true) {
@@ -312,7 +324,6 @@ class TienCertificationThreeActivity :
             }
 
             override fun onError(errorCode: String, errorMsg: String, sequenceId: String) {
-                Log.i("1111111111", "onError: "+errorMsg.toString())
             }
         })
     }

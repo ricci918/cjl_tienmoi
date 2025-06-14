@@ -47,10 +47,16 @@ class TienLoanConfirmationActivity :
             vfId.startFlipping()
             tv12Id.text = Html.fromHtml(getString(R.string.LoanConfirmation10))
             tvNextStep.setOnClickListener {
+                if (TienSystemUtil.isFastClick(800)) {
+                    return@setOnClickListener
+                }
                 showLoadingOne()
                 presenter?.getTienAddVayHub()
             }
             tv12Id.setOnClickListener {
+                if (TienSystemUtil.isFastClick(800)) {
+                    return@setOnClickListener
+                }
                 startActivity(TienLoanContractActivity::class.java)
             }
         }

@@ -12,6 +12,7 @@ import com.tienmoi.vayonline.nhanh.model.data.TienAreaListData
 import com.tienmoi.vayonline.nhanh.model.data.TienAttach
 import com.tienmoi.vayonline.nhanh.model.data.TienUserFieldCodeData
 import com.tienmoi.vayonline.nhanh.model.utils.TienSharedPreferencesUtil
+import com.tienmoi.vayonline.nhanh.model.utils.TienSystemUtil
 import com.tienmoi.vayonline.nhanh.model.utils.TienToastUtil
 import com.tienmoi.vayonline.nhanh.presenter.TienCertificationTwoPresenter
 import com.tienmoi.vayonline.nhanh.ui.dialog.TienKycDialog
@@ -107,6 +108,9 @@ class TienCertificationTwoActivity :
                 }
             }
             tvNextStep.setOnClickListener {
+                if (TienSystemUtil.isFastClick(800)) {
+                    return@setOnClickListener
+                }
                 val arrayListOf = arrayListOf<TienAttach>()
                 arrayListOf.add(
                     TienAttach(

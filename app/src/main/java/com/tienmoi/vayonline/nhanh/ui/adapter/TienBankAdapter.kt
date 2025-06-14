@@ -45,6 +45,9 @@ class TienBankAdapter(
                 name.text = it1.g3jMqJO
                 name1.text = it1.dqoVa3H
                 setOnClickListener {
+                    if (TienSystemUtil.isFastClick(800)) {
+                        return@setOnClickListener
+                    }
                     onSelectedListener.invoke(it1)
                 }
             }

@@ -72,6 +72,7 @@ object TienSystemUtil {
             return ""
         }
     }
+
     fun tienLaunchAppDetail(context: Activity, appPkg: String) {
         try {
             if (TextUtils.isEmpty(appPkg)) return
@@ -83,16 +84,31 @@ object TienSystemUtil {
             e.printStackTrace()
         }
     }
+
     fun getTienAndroidId(context: Context): String {
         return Settings.Secure.getString(
             context.applicationContext.contentResolver,
             Settings.Secure.ANDROID_ID
         )
     }
+
     fun addTienComma(str: String): String {
         val myformat: DecimalFormat = DecimalFormat()
         myformat.applyPattern("#,###")
         return myformat.format(str.toDouble())
     }
+
+    private var lastClickTime: Long = 0
+
+    @Synchronized
+    fun isFastClick(milliSecond: Int): Boolean {
+        val time = System.currentTimeMillis()
+        if (time - lastClickTime < milliSecond) {
+            return true
+        }
+        lastClickTime = time
+        return false
+    }
+
 
 }
