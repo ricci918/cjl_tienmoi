@@ -281,7 +281,9 @@ class TienCertificationThreeActivity :
 
     override fun successTienCreate(data: Any) {
         dismissLoading()
-        startActivity(TienMainActivity::class.java)
+        val intent = Intent(this, TienMainActivity::class.java)
+        intent.putExtra(TienSystemUtil.GOOD, TienSystemUtil.GOOD)
+        startActivity(intent)
         finishAffinity()
     }
 
