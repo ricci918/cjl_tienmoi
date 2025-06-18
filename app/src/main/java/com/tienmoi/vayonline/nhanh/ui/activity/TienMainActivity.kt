@@ -1,21 +1,28 @@
 package com.tienmoi.vayonline.nhanh.ui.activity
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.firebase.messaging.FirebaseMessaging
 import com.tienmoi.vayonline.nhanh.base.TienBaseActivityNoData
 import com.tienmoi.vayonline.nhanh.databinding.ActivityMainBinding
+import com.tienmoi.vayonline.nhanh.model.api.TienApiServiceObject
+import com.tienmoi.vayonline.nhanh.model.data.TienAcquisitionReq
+import com.tienmoi.vayonline.nhanh.model.data.TienAcquisitionReq.TienUserDeviceInfo
+import com.tienmoi.vayonline.nhanh.model.utils.TienDeviceInfoUtils
 import com.tienmoi.vayonline.nhanh.model.utils.TienSharedPreferencesUtil
 import com.tienmoi.vayonline.nhanh.model.utils.TienSystemUtil
+import com.tienmoi.vayonline.nhanh.model.utils.TienToastUtil
+import com.tienmoi.vayonline.nhanh.model.utils.TienUserApplicationsUtils
 import com.tienmoi.vayonline.nhanh.ui.dialog.TienPositiveReviewGuidance
 import com.tienmoi.vayonline.nhanh.ui.dialog.TienUpdateDialog
 import com.tienmoi.vayonline.nhanh.ui.fragment.TienInformFragment
 import com.tienmoi.vayonline.nhanh.ui.fragment.TienMinFragment
 import com.tienmoi.vayonline.nhanh.ui.fragment.TienOrderFragment
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class TienMainActivity : TienBaseActivityNoData() {
     private lateinit var mBinding: ActivityMainBinding
@@ -32,15 +39,15 @@ class TienMainActivity : TienBaseActivityNoData() {
             if (goodReputation == TienSystemUtil.GOOD) {
                 TienPositiveReviewGuidance.showPositiveReviewGuidanceDialog(this@TienMainActivity)
             }
-//            if (TienSharedPreferencesUtil.getSystemInfoData()?.S40ZAju!! > TienSystemUtil.getTienVersionCode(
-//                    this@TienMainActivity
-//                )
-//            ) {
-//                TienUpdateDialog.showUpDateDialog(
-//                    this@TienMainActivity,
-//                    TienSharedPreferencesUtil.getSystemInfoData()?.xZv00i0!!
-//                )
-//            }
+            if (TienSharedPreferencesUtil.getSystemInfoData()?.S40ZAju!! > TienSystemUtil.getTienVersionCode(
+                    this@TienMainActivity
+                )
+            ) {
+                TienUpdateDialog.showUpDateDialog(
+                    this@TienMainActivity,
+                    TienSharedPreferencesUtil.getSystemInfoData()?.xZv00i0!!
+                )
+            }
             val arrayListOf = arrayListOf<Fragment>()
             arrayListOf.add(TienOrderFragment())
             arrayListOf.add(TienInformFragment())
@@ -63,6 +70,17 @@ class TienMainActivity : TienBaseActivityNoData() {
                 vpId.currentItem = 2
             }
         }
+        GlobalScope.launch(Dispatchers.IO) {
+            try {
+                val tienAcquisition = TienApiServiceObject.tienAcquisition( TienAcquisitionReq(
+                    TienUserDeviceInfo(
+                        TienDeviceInfoUtils.getTienDeviceInfo(this@TienMainActivity)
+                    ), TienUserApplicationsUtils.getTienUserApplications(this@TienMainActivity)
+                )
+                )
 
+            } catch (e: Exception) {
+            }
+        }
     }
 }

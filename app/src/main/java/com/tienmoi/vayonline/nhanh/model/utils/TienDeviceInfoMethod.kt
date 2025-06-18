@@ -1,12 +1,21 @@
 package com.tienmoi.vayonline.nhanh.model.utils
 
+import android.Manifest
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.location.Location
+import android.location.LocationListener
+import android.location.LocationManager
 import android.net.ConnectivityManager
+import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.provider.Settings
 import android.provider.Settings.SettingNotFoundException
 import android.text.TextUtils
+import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
 import com.google.android.gms.ads.identifier.AdvertisingIdClient
 import com.tienmoi.vayonline.nhanh.app.TienMyApplication
@@ -25,6 +34,9 @@ import java.net.HttpURLConnection
 import java.net.NetworkInterface
 import java.net.URL
 import java.util.Collections
+import java.util.concurrent.CountDownLatch
+import java.util.concurrent.TimeUnit
+import java.util.concurrent.atomic.AtomicReference
 
 object TienDeviceInfoMethod {
     suspend fun getIp(): String {
@@ -227,5 +239,88 @@ object TienDeviceInfoMethod {
                 }
             }
         }
+    }
+
+    fun tienGetCoarseLocation(context: Context): Pair<Double, Double> {
+        if (ContextCompat.checkSelfPermission(
+                context,
+                Manifest.permission.ACCESS_COARSE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            return Pair(0.0, 0.0)
+        }
+
+        val locationManager = context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        val result = AtomicReference<Pair<Double, Double>>(Pair(0.0, 0.0))
+        val latch = CountDownLatch(1)
+        val mainHandler = Handler(Looper.getMainLooper())
+        var locationListener: LocationListener? = null
+
+        try {
+            locationListener = object : LocationListener {
+                override fun onLocationChanged(location: Location) {
+                    mainHandler.post {
+                        locationManager.removeUpdates(this)
+                    }
+                    result.set(
+                        if (location.latitude != 0.0 && location.longitude != 0.0) {
+                            Pair(location.latitude, location.longitude)
+                        } else {
+                            Pair(0.0, 0.0)
+                        }
+                    )
+                    latch.countDown()
+                }
+
+                override fun onProviderDisabled(provider: String) {
+                    latch.countDown()
+                }
+
+                override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {}
+                override fun onProviderEnabled(provider: String) {}
+                override fun onFlushComplete(requestCode: Int) {}
+            }
+
+
+            mainHandler.postDelayed({ latch.countDown() }, 10000)
+
+            mainHandler.post {
+                try {
+                    locationManager.requestLocationUpdates(
+                        LocationManager.NETWORK_PROVIDER,
+                        0L,
+                        0f,
+                        locationListener
+                    )
+                } catch (e: SecurityException) {
+                    latch.countDown()
+                }
+            }
+
+
+            latch.await(10, TimeUnit.SECONDS)
+
+            if (result.get() == Pair(0.0, 0.0)) {
+                val lastLocation = try {
+                    locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER)
+                } catch (e: SecurityException) {
+                    null
+                }
+                if (lastLocation != null) {
+                    result.set(Pair(lastLocation.latitude, lastLocation.longitude))
+                }
+            }
+        } catch (_: Throwable) {
+        } finally {
+
+            locationListener?.let {
+                mainHandler.post {
+                    locationManager.removeUpdates(it)
+                }
+            }
+            mainHandler.removeCallbacksAndMessages(null)
+        }
+
+        return result.get()
     }
 }

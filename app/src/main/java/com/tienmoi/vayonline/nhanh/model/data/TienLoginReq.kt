@@ -13,6 +13,7 @@ data class TienLoginReq(
     val KCcUfPO: Long,//installTime
     val Q9y3gBA: String,//fbc
     val h9j7aeQ: String,//fbp
+    val LIHwGXw: String,//deviceToken
 )
 
 class UserGpsInfo(

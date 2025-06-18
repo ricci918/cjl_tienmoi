@@ -1,5 +1,6 @@
 package com.tienmoi.vayonline.nhanh.model.utils
 
+import com.tienmoi.vayonline.nhanh.app.TienMyApplication
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -36,6 +37,7 @@ object TienHttpUtil {
     private var interceptor = Interceptor { chain ->
         val builder = chain.request().newBuilder()
             .addHeader("Accept-Language", LANGUAGE)
+            .addHeader("user-agent", "tienmoi/android-"+ TienSystemUtil.getTienVersionName(TienMyApplication.application))
         val request = builder.build()
 
         return@Interceptor chain.proceed(request)

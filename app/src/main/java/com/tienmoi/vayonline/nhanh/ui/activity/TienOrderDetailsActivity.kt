@@ -57,19 +57,21 @@ class TienOrderDetailsActivity :
                 "yyyy-MM-dd"
             )
             tv20Id.text = data.sd8HKZu.toString() + getString(R.string.orderDetails13)
-            tv22Id.text = data.QYFOMsi.toString()
+
             when (data.XgC3trl) {
                 "PAYING" -> {
                     rl2Id.visibility = View.VISIBLE
                 }
 
                 "TO_REPAYMENT", "OVERDUE" -> {
+                    tv22Id.text = data.ShX3hSP.toString()
                     rl1Id.visibility = View.VISIBLE
                     tv19Id.visibility = View.GONE
                     tv20Id.visibility = View.GONE
                 }
 
                 "WAIT_TO_WITHDRAW" -> {
+                    tv22Id.text = data.QYFOMsi.toString()
                     rl1Id.visibility = View.VISIBLE
                     tv15Id.visibility = View.GONE
                     tv16Id.visibility = View.GONE

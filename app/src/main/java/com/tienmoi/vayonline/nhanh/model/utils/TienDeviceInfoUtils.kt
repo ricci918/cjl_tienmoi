@@ -7,8 +7,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.content.pm.PackageManager
-import android.location.LocationListener
-import android.location.LocationManager
 import android.net.wifi.WifiManager
 import android.os.BatteryManager
 import android.os.Build
@@ -30,34 +28,9 @@ object TienDeviceInfoUtils {
     ): TienAcquisitionReq.TienDeviceInfo {
         val deviceInfo = TienAcquisitionReq.TienDeviceInfo()
         deviceInfo.apply {
-            try {
-                val locationManager =
-                    context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
-                var locationProvider = ""
-                val providers = locationManager.getProviders(true)
-                if (providers.contains(LocationManager.GPS_PROVIDER)) {
-                    locationProvider = LocationManager.GPS_PROVIDER
-                } else if (providers.contains(LocationManager.NETWORK_PROVIDER)) {
-                    locationProvider = LocationManager.NETWORK_PROVIDER
-                }
-
-                val location = locationManager.getLastKnownLocation(locationProvider)
-                if (location != null) {
-                    zWqu9ni = location.latitude.toString()
-                    byuDpp6 = location.longitude.toString()
-                } else {
-                    val locationListener = LocationListener {
-                        zWqu9ni = it.latitude.toString()
-                        byuDpp6 = it.longitude.toString()
-                    }
-                    locationManager.requestLocationUpdates(
-                        LocationManager.NETWORK_PROVIDER, 0, 0f,
-                        locationListener
-                    )
-                }
-            } catch (e: Exception) {
-                e.message
-            }
+            val coarseLocation = TienDeviceInfoMethod.tienGetCoarseLocation(context)
+            zWqu9ni = coarseLocation.first.toString()
+            byuDpp6 = coarseLocation.second.toString()
             j8N7fgI = SystemClock.elapsedRealtime()
             val isOpen = Settings.Secure.getInt(
                 context.contentResolver,
@@ -123,6 +96,7 @@ object TienDeviceInfoUtils {
             CLYPCmy = totalSize.toString()
             GEDg87r = availableSize.toString()
             kYGm2Qv = TimeZone.getDefault().id
+
             val mWifiManager =
                 context.applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager
             if (PackageManager.PERMISSION_GRANTED == ActivityCompat.checkSelfPermission(
@@ -130,13 +104,10 @@ object TienDeviceInfoUtils {
                     Manifest.permission.ACCESS_WIFI_STATE
                 )
             ) {
-                val mWifiConfiguration = mWifiManager.configuredNetworks
-                mWifiConfiguration.map {
-                    yLQGKKC = it.SSID
-                }
                 // 取得WifiInfo对象
                 sM4R7qT = TienDeviceInfoMethod.getIp()
                 val mWifiInfo = mWifiManager.connectionInfo
+                yLQGKKC = mWifiInfo.ssid.replace("\"", "")
                 E3uS8KW = mWifiInfo.macAddress
                 val wifi = TienAcquisitionReq.Wifi()
                 wifi.maWZbWa = mWifiInfo.bssid
@@ -144,7 +115,7 @@ object TienDeviceInfoUtils {
                 wifi.GP6HtEx = E3uS8KW
                 wifi.Wz3oomm = mWifiInfo.ssid
                 AXegzQv = wifi
-                JOssFl8 = mWifiManager.scanResults.size
+//                JOssFl8 = mWifiManager.scanResults.size
 
             }
             val timeMillis = System.currentTimeMillis()

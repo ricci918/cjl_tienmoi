@@ -17,6 +17,7 @@ object TienSharedPreferencesUtil {
     private const val PHONE = "phone"
     private const val NAME = "name"
     private const val LICENCE = "licence"
+    private const val FCM = "fcm"
     private lateinit var sharedPreferences: SharedPreferences
 
     fun init(context: Context) {
@@ -90,6 +91,7 @@ object TienSharedPreferencesUtil {
     fun getTienCampaignId(): String {
         return sharedPreferences.getString(CAMPAIGNID, "") ?: ""
     }
+
     fun putTienPhone(phone: String) {
         editor.putString(PHONE, phone)
         editor.apply()
@@ -115,6 +117,15 @@ object TienSharedPreferencesUtil {
 
     fun getTienName(): String {
         return sharedPreferences.getString(NAME, "") ?: ""
+    }
+
+    fun putTienFCM(fcm: String) {
+        editor.putString(FCM, fcm)
+        editor.apply()
+    }
+
+    fun getTienFCM(): String {
+        return sharedPreferences.getString(FCM, "") ?: ""
     }
 
 }

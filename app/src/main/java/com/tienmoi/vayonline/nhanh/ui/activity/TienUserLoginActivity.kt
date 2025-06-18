@@ -7,8 +7,11 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.text.Html
+import android.util.Log
 import android.view.View
 import com.appsflyer.AppsFlyerLib
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.messaging.FirebaseMessaging
 import com.tienmoi.vayonline.nhanh.R
 import com.tienmoi.vayonline.nhanh.base.TienBaseActivity
 import com.tienmoi.vayonline.nhanh.databinding.ActivityUserLoginBinding
@@ -76,7 +79,7 @@ class TienUserLoginActivity :
                             ?: "",
                         TienSharedPreferencesUtil.getTienCampaignId(),
                         TienSharedPreferencesUtil.getTienGaId(),
-                        firstInstallTime, fbc, fbp
+                        firstInstallTime, fbc, fbp, TienSharedPreferencesUtil.getTienFCM()
                     )
                 )
             }
@@ -91,6 +94,15 @@ class TienUserLoginActivity :
     }
 
     override fun initData() {
+        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+            if (!task.isSuccessful) {
+                return@OnCompleteListener
+            }
+
+            // Get new FCM registration token
+            val token = task.result
+            TienSharedPreferencesUtil.putTienFCM(token)
+        })
     }
 
     override fun initPresenter(): TienLoginPresenter = TienLoginPresenter()
