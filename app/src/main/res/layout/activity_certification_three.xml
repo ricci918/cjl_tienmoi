@@ -155,6 +155,7 @@
                 android:layout_below="@id/tv9_id"
                 android:layout_marginTop="@dimen/space_40"
                 android:layout_marginBottom="@dimen/space_20"
+                android:visibility="gone"
                 android:gravity="center"
                 android:text="@string/certificationThree5"
                 android:textColor="@color/color_60a7fe"
@@ -165,6 +166,7 @@
                 android:layout_width="@dimen/space_150"
                 android:layout_height="@dimen/space_100"
                 android:layout_below="@id/tv5_id"
+                android:visibility="gone"
                 android:layout_centerHorizontal="true"
                 android:src="@mipmap/certification7" />
 
@@ -174,6 +176,7 @@
                 android:layout_height="@dimen/space_100"
                 android:layout_below="@id/tv5_id"
                 android:layout_centerHorizontal="true"
+                android:visibility="gone"
                 android:src="@mipmap/certification6" />
 
 
@@ -184,6 +187,7 @@
                 android:layout_below="@id/iv2_id"
                 android:layout_marginTop="@dimen/space_40"
                 android:layout_marginBottom="@dimen/space_20"
+                android:visibility="gone"
                 android:gravity="center"
                 android:text="@string/certificationThree6"
                 android:textColor="@color/color_60a7fe"
@@ -193,6 +197,7 @@
                 android:id="@+id/iv3_id"
                 android:layout_width="@dimen/space_150"
                 android:layout_height="@dimen/space_100"
+                android:visibility="gone"
                 android:layout_below="@id/tv6_id"
                 android:layout_centerHorizontal="true"
                 android:src="@mipmap/certification8" />
@@ -201,6 +206,7 @@
                 android:id="@+id/iv4_id"
                 android:layout_width="@dimen/space_60"
                 android:layout_height="@dimen/space_100"
+                android:visibility="gone"
                 android:layout_below="@id/tv6_id"
                 android:layout_centerHorizontal="true"
                 android:src="@mipmap/certification6" />
@@ -209,6 +215,7 @@
                 android:id="@+id/tv7_id"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/space_70"
+                android:visibility="gone"
                 android:layout_below="@id/iv4_id"
                 android:layout_marginStart="@dimen/space_40"
                 android:layout_marginTop="@dimen/space_20"

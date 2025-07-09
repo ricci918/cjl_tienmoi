@@ -1,11 +1,14 @@
 package com.tienmoi.vayonline.nhanh.model.utils
 
 import android.app.Activity
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.provider.Settings
 import android.text.TextUtils
+import com.tienmoi.vayonline.nhanh.R
 import java.text.DecimalFormat
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -15,6 +18,7 @@ object TienSystemUtil {
     var ORDER_CODE = "orderCode"
     var ONE_VALUE = 1
     var TWO_VALUE = 2
+    var THREE_VALUE = 3
     var REFRESH_EVENT = "refresh"
     var OPERATOR = "operator"
     var TYPE = "type"
@@ -108,6 +112,14 @@ object TienSystemUtil {
         }
         lastClickTime = time
         return false
+    }
+
+    fun copyText(activity: Activity,text: String){
+        val clipboard: ClipboardManager =
+            activity.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        val clip = ClipData.newPlainText("simple text", text)
+        clipboard.setPrimaryClip(clip)
+        TienToastUtil.myToast(activity.getString(R.string.dialog9))
     }
 
 

@@ -4,6 +4,7 @@ import com.tienmoi.vayonline.nhanh.base.TienBasePresenter
 import com.tienmoi.vayonline.nhanh.model.api.TienApiServiceObject
 import com.tienmoi.vayonline.nhanh.model.contract.TienOrderFragmentContract
 import com.tienmoi.vayonline.nhanh.model.data.TienAcquisitionReq
+import com.tienmoi.vayonline.nhanh.model.data.TienOrderCreateReq
 import com.tienmoi.vayonline.nhanh.model.data.TienRenewReq
 import com.tienmoi.vayonline.nhanh.model.data.TienWithdrawReq
 import com.tienmoi.vayonline.nhanh.model.utils.TienToastUtil
@@ -150,6 +151,48 @@ class TienOrderFragmentPresenter :
                 withContext(Dispatchers.Main) {
                     mView?.successTienRenew(
                         tienRenew
+                    )
+                }
+
+            } catch (e: Exception) {
+                withContext(Dispatchers.Main) {
+                    if (e.message != "" && e.message != null) {
+                        mView?.error()
+                    }
+                }
+            }
+        }
+    }
+
+    @OptIn(DelicateCoroutinesApi::class)
+    override fun getTienInfo() {
+        GlobalScope.launch(Dispatchers.IO) {
+            try {
+                val tienInfo = TienApiServiceObject.tienInfo()
+                withContext(Dispatchers.Main) {
+                    mView?.successTienInfo(
+                        tienInfo
+                    )
+                }
+
+            } catch (e: Exception) {
+                withContext(Dispatchers.Main) {
+                    if (e.message != "" && e.message != null) {
+                        TienToastUtil.myToast(e.message!!)
+                    }
+                }
+            }
+        }
+    }
+
+    @OptIn(DelicateCoroutinesApi::class)
+    override fun getTienCreate(data: TienOrderCreateReq) {
+        GlobalScope.launch(Dispatchers.IO) {
+            try {
+                val tienCreate = TienApiServiceObject.tienCreate(data)
+                withContext(Dispatchers.Main) {
+                    mView?.successTienCreate(
+                        tienCreate
                     )
                 }
 

@@ -6,7 +6,6 @@ import com.facebook.appevents.AppEventsLogger
 import com.tienmoi.vayonline.nhanh.R
 import com.tienmoi.vayonline.nhanh.model.utils.TienAFInit
 import com.tienmoi.vayonline.nhanh.model.utils.TienDeviceInfoMethod
-import com.tienmoi.vayonline.nhanh.model.utils.TienInitLicense
 import com.tienmoi.vayonline.nhanh.model.utils.TienInstallReferrer
 import com.tienmoi.vayonline.nhanh.model.utils.TienSharedPreferencesUtil
 
@@ -23,7 +22,6 @@ class TienMyApplication : Application() {
         FacebookSdk.sdkInitialize(this)
         AppEventsLogger.activateApp(this)
         TienSharedPreferencesUtil.init(application)
-        TienInitLicense.license()
         TienDeviceInfoMethod.tienInitAgId()
         TienAFInit.initAF()
         TienInstallReferrer.initInstallReferrer()

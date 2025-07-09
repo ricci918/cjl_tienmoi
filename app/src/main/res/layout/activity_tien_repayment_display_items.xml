@@ -37,6 +37,20 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tvHint1_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv1_id"
+            android:layout_marginStart="@dimen/space_2"
+            android:layout_marginTop="@dimen/space_3"
+            android:layout_toEndOf="@id/tv1_id"
+            android:text="@string/repayment19"
+            android:textColor="@color/color_60a7fe"
+            android:textSize="@dimen/sp_9"
+            android:textStyle="bold" />
+
+
+        <TextView
             android:id="@+id/tv2_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,6 +68,19 @@
             android:text="@string/repayment7"
             android:textColor="@color/color_60a7fe"
             android:textSize="@dimen/sp_14"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvHint2_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv3_id"
+            android:layout_marginStart="@dimen/space_2"
+            android:layout_marginTop="@dimen/space_3"
+            android:layout_toEndOf="@id/tv3_id"
+            android:text="@string/repayment19"
+            android:textColor="@color/color_60a7fe"
+            android:textSize="@dimen/sp_9"
             android:textStyle="bold" />
 
         <TextView

@@ -27,6 +27,7 @@ import com.tienmoi.vayonline.nhanh.model.data.TienOrderCreateReq
 import com.tienmoi.vayonline.nhanh.model.data.TienResultReq
 import com.tienmoi.vayonline.nhanh.model.utils.TienDeviceInfoUtils
 import com.tienmoi.vayonline.nhanh.model.utils.TienGsonUtil
+import com.tienmoi.vayonline.nhanh.model.utils.TienInitLicense
 import com.tienmoi.vayonline.nhanh.model.utils.TienSharedPreferencesUtil
 import com.tienmoi.vayonline.nhanh.model.utils.TienSystemUtil
 import com.tienmoi.vayonline.nhanh.model.utils.TienToastUtil
@@ -130,18 +131,16 @@ class TienCertificationThreeActivity :
                     return@setOnClickListener
                 }
                 if (!needReq) {
-                    TienKycDialog.showTienCameraDialog(this@TienCertificationThreeActivity) {
-                        AndPermission.with(this@TienCertificationThreeActivity)
-                            .permission(Manifest.permission.CAMERA)
-                            .onGranted {
-                                licence()
-                                needReq = true
-                            }
-                            .onDenied {
+                    AndPermission.with(this@TienCertificationThreeActivity)
+                        .permission(Manifest.permission.CAMERA)
+                        .onGranted {
+                            licence()
+                            needReq = true
+                        }
+                        .onDenied {
 
-                            }
-                            .start()
-                    }
+                        }
+                        .start()
                 } else {
                     licence()
                 }
@@ -150,7 +149,7 @@ class TienCertificationThreeActivity :
                 if (TienSystemUtil.isFastClick(800)) {
                     return@setOnClickListener
                 }
-                if (et3Id.text.toString() != "" && et2Id.text.toString() != "" && imageOneNumber != 0.0 && imageTwoNumber != 0.0 && imageThreeNumber != 0.0) {
+                if (et3Id.text.toString() != "" && et2Id.text.toString() != "" && imageThreeNumber != 0.0) {
                     if (TienSharedPreferencesUtil.getSystemInfoData()?.XKruWxQ == true) {
                         if (TienSharedPreferencesUtil.getSystemInfoData()?.hGkzoMf == true) {
                             showLoadingOne()
@@ -166,8 +165,8 @@ class TienCertificationThreeActivity :
                             et2Id.text.toString(),
                             null,
                             null,
-                            imageOneNumber.toInt().toString(),
-                            imageTwoNumber.toInt().toString(),
+                            "",
+                            "",
                             imageThreeNumber.toInt().toString(),
                             false
                         )
@@ -217,6 +216,7 @@ class TienCertificationThreeActivity :
     override fun initData() {
         presenter?.getTienInfo()
         presenter?.getTienBankList()
+        TienInitLicense.license()
     }
 
     override fun initPresenter(): TienCertificationThreePresenter =

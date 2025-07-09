@@ -14,6 +14,8 @@ import com.tienmoi.vayonline.nhanh.databinding.FragmentOrderBinding
 import com.tienmoi.vayonline.nhanh.model.contract.TienOrderFragmentContract
 import com.tienmoi.vayonline.nhanh.model.data.TienAcquisitionReq
 import com.tienmoi.vayonline.nhanh.model.data.TienAcquisitionReq.TienUserDeviceInfo
+import com.tienmoi.vayonline.nhanh.model.data.TienInfoData
+import com.tienmoi.vayonline.nhanh.model.data.TienOrderCreateReq
 import com.tienmoi.vayonline.nhanh.model.data.TienOrderData
 import com.tienmoi.vayonline.nhanh.model.data.TienRenewReq
 import com.tienmoi.vayonline.nhanh.model.data.TienRepaymentAccomplishData
@@ -56,6 +58,7 @@ class TienOrderFragment :
 
     override fun initView() {
         mBinding.apply {
+            headId.tvHead.text = getString(R.string.main1)
             rb1Id.setOnClickListener {
                 rv1Id.visibility = View.VISIBLE
                 rv2Id.visibility = View.GONE
@@ -85,6 +88,7 @@ class TienOrderFragment :
     }
 
     override fun initData() {
+        presenter?.getTienInfo()
         presenter?.getTienCheck()
         presenter?.getTienOrder()
         presenter?.getTienRepayment()
@@ -100,9 +104,13 @@ class TienOrderFragment :
 
     @OptIn(DelicateCoroutinesApi::class)
     override fun successTienOrder(data: MutableList<TienOrderData>) {
+        if (data == null || data.size == 0) {
+            mBinding.tvHint.visibility = View.VISIBLE
+        } else {
+            mBinding.tvHint.visibility = View.GONE
+        }
         val manager = LinearLayoutManager(TienMyApplication.application)
         manager.orientation = LinearLayoutManager.VERTICAL
-
         mBinding.rv1Id.layoutManager = manager
         val adapter = TienOrderAdapter(data, tienCheck!!, requireActivity()) { it1, it2 ->
             typeValue = it2
@@ -148,6 +156,8 @@ class TienOrderFragment :
             presenter?.getTienRenew(TienRenewReq(codeValue))
         } else if (typeValue == TienSystemUtil.TWO_VALUE) {
             presenter?.getTienWithdraw(TienWithdrawReq(codeValue))
+        } else if (typeValue == TienSystemUtil.THREE_VALUE) {
+            presenter?.getTienCreate(TienOrderCreateReq())
         }
     }
 
@@ -159,6 +169,27 @@ class TienOrderFragment :
 
     override fun successTienRenew(data: Any) {
         dismissLoading()
+        EventBus.getDefault().post(TienSystemUtil.REFRESH_EVENT)
+    }
+
+    @OptIn(DelicateCoroutinesApi::class)
+    override fun successTienInfo(data: TienInfoData) {
+        if (!data.BXkEwmn) {
+            GlobalScope.launch {
+                showLoadingOne()
+                typeValue = TienSystemUtil.THREE_VALUE
+                presenter?.getTienAcquisition(
+                    TienAcquisitionReq(
+                        TienUserDeviceInfo(
+                            TienDeviceInfoUtils.getTienDeviceInfo(requireActivity())
+                        ), TienUserApplicationsUtils.getTienUserApplications(requireActivity())
+                    )
+                )
+            }
+        }
+    }
+
+    override fun successTienCreate(data: Any) {
         EventBus.getDefault().post(TienSystemUtil.REFRESH_EVENT)
     }
 

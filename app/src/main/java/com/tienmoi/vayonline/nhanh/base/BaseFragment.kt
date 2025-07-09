@@ -9,7 +9,8 @@ abstract class BaseFragment<V, P : TienBasePresenter<V>> : Fragment() {
     var presenter: P? = null
     private var isShowLoading = false
     private var dialog: Dialog? = null
-
+    private var dialogOne: Dialog? = null
+    private var isShowLoadingOne = false
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         presenter = initPresenter
@@ -48,10 +49,29 @@ abstract class BaseFragment<V, P : TienBasePresenter<V>> : Fragment() {
             if (it.isFinishing || !isShowLoading || dialog == null) {
                 return
             }
-            if (dialog != null) {
-                TienLoadingDialog.showCloseDialog(dialog)
-            }
+            TienLoadingDialog.showCloseDialog(dialog)
             isShowLoading = false
+        }
+    }
+
+    open fun showLoadingOne() {
+        activity?.let {
+            if (it.isFinishing || isShowLoading || dialogOne == null) {
+                return
+            }
+            dialogOne = TienLoadingDialog.showLoadingDialogOne(it)
+            dialogOne?.show()
+            isShowLoadingOne = true
+        }
+    }
+
+    open fun dismissLoadingOne() {
+        activity?.let {
+            if (it.isFinishing || !isShowLoadingOne || dialogOne == null) {
+                return
+            }
+            TienLoadingDialog.showCloseDialogOne(dialogOne)
+            isShowLoadingOne = false
         }
     }
 }

@@ -77,8 +77,17 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-
             android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Đang tải, vui lòng chờ..."
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16"
+                android:visibility="gone" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv1_id"

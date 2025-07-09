@@ -64,7 +64,7 @@
     <string name="certificationThree6">Tải ảnh mặt sau CMND/CCCD rõ ràng.</string>
     <string name="certificationThree7">Lưu ý:\nHãy đảm bảo ảnh rõ ràng để quá trình \nxét duyệt diễn ra nhanh hơn nhé!</string>
     <string name="certificationThree8">Tải lên ảnh tự chụp khuôn mặt của bạn.</string>
-    <string name="certificationThree9">Vui lòng tải lên một bức ảnh rõ nét, chỉ hiển thị khuôn mặt của bạn trong điều kiện ánh sáng tốt. Để kết quả chính xác, vui lòng tránh để người khác hoặc vật thể xuất hiện trong ảnh. Nếu gặp sự cố, bạn có thể thử xoá và cài đặt lại ứng dụng, đồng thời kiểm tra và cấp đủ quyền cần thiết.</string>
+    <string name="certificationThree9">Vui lòng hoàn tất xác minh khuôn mặt. Dữ liệu chỉ dùng cho đơn vay và được bảo mật.\n\nLưu ý: Vui lòng thực hiện ở nơi có đủ ánh sáng. Nếu không mở được camera, hãy đóng và mở lại ứng dụng.</string>
     <string name="certificationThree10">+15.000.000\nhạn mức</string>
     <string name="LoanConfirmation1"><![CDATA[0812xxxx61 đã vay thành công <font color="#60A7FE">15.000.000</font>]]></string>
     <string name="LoanConfirmation2"><![CDATA[0942xxxx51 đã vay thành công <font color="#60A7FE">20.000.000</font>]]></string>
@@ -194,6 +194,7 @@ Gặp vấn đề gì? Hãy chia sẻ ngay nhé!
     <string name="repayment14">Tên người nhận：</string>
     <string name="repayment15">Số tài khoản：</string>
     <string name="repayment16">Ngân hàng：</string>
+    <string name="repayment19">（Nhấn để sao chép.）</string>
     <string name="repayment17">Lưu ý: Vui lòng chỉ chuyển khoản đến tài khoản được chỉ định duy nhất ở trên. Khi chuyển khoản, hãy kiểm tra chính xác tên người nhận và số tài khoản.
 Khi hoàn trả khoản vay, bắt buộc ghi rõ họ tên và số điện thoại của bạn trong phần nội dung chuyển khoản.
 </string>

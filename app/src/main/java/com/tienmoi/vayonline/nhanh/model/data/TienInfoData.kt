@@ -5,6 +5,7 @@ data class TienInfoData(
     val iaqWeRm: String,//bankCardNo
     val JtMhKBI: DefaultPaymentMethod, //defaultPaymentMethod
     val QLuTvkJ: String,//idCardNumber
+    val BXkEwmn: Boolean,//orderCreated
     val WcrIiHm: Boolean,//tester
 )
 

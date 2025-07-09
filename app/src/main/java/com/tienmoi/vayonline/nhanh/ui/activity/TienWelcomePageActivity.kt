@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.text.Html
+import android.util.Log
 import android.view.View
 import com.tienmoi.vayonline.nhanh.R
 import com.tienmoi.vayonline.nhanh.base.TienBaseActivity
@@ -14,6 +15,7 @@ import com.tienmoi.vayonline.nhanh.model.data.TienQueryStatusData
 import com.tienmoi.vayonline.nhanh.model.data.TienSystemInfoData
 import com.tienmoi.vayonline.nhanh.model.utils.TienSharedPreferencesUtil
 import com.tienmoi.vayonline.nhanh.model.utils.TienSystemUtil
+import com.tienmoi.vayonline.nhanh.model.utils.TienUserApplicationsUtils
 import com.tienmoi.vayonline.nhanh.model.utils.TienUserUtil
 import com.tienmoi.vayonline.nhanh.presenter.TienWelcomePagePresenter
 

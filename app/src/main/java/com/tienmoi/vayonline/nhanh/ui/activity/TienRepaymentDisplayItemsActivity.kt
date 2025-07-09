@@ -36,8 +36,45 @@ class TienRepaymentDisplayItemsActivity :
             mBinding.tvReturn.setOnClickListener {
                 finish()
             }
+            tv1Id.setOnClickListener {
+                TienSystemUtil.copyText(
+                    this@TienRepaymentDisplayItemsActivity,
+                    tv2Id.text.toString()
+                )
+            }
+            tv2Id.setOnClickListener {
+                TienSystemUtil.copyText(
+                    this@TienRepaymentDisplayItemsActivity,
+                    tv2Id.text.toString()
+                )
+            }
+            tvHint1Id.setOnClickListener {
+                TienSystemUtil.copyText(
+                    this@TienRepaymentDisplayItemsActivity,
+                    tv2Id.text.toString()
+                )
+            }
+
+            tv3Id.setOnClickListener {
+                TienSystemUtil.copyText(
+                    this@TienRepaymentDisplayItemsActivity,
+                    tv4Id.text.toString()
+                )
+            }
+            tvHint2Id.setOnClickListener {
+                TienSystemUtil.copyText(
+                    this@TienRepaymentDisplayItemsActivity,
+                    tv4Id.text.toString()
+                )
+            }
+            tv4Id.setOnClickListener {
+                TienSystemUtil.copyText(
+                    this@TienRepaymentDisplayItemsActivity,
+                    tv4Id.text.toString()
+                )
+            }
         }
-        }
+    }
 
 
     override fun initData() {
