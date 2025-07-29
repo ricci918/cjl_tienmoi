@@ -18,6 +18,7 @@ import com.tienmoi.vayonline.nhanh.model.utils.TienSystemUtil
 import com.tienmoi.vayonline.nhanh.ui.activity.TienOperatorSelectActivity
 import com.tienmoi.vayonline.nhanh.ui.activity.TienOrderDetailsActivity
 import com.tienmoi.vayonline.nhanh.ui.activity.TienRepaymentAccountActivity
+import com.tienmoi.vayonline.nhanh.ui.activity.TienRepaymentActivity
 import com.tienmoi.vayonline.nhanh.ui.dialog.TienZaloDialog
 
 class TienRepaymentAdapter(
@@ -94,21 +95,21 @@ class TienRepaymentAdapter(
                     }
                 }
 
-                button1.setOnClickListener {
-                    if (TienSystemUtil.isFastClick(800)) {
-                        return@setOnClickListener
-                    }
-                    if (button1.text.toString() == context.getString(R.string.fragment25)) {//还款
-                        val intent = Intent(context, TienRepaymentAccountActivity::class.java)
-                        intent.putExtra(TienSystemUtil.ORDER_CODE, it1.MICYPp9)
-                        context.startActivity(intent)
-                    }
-                }
                 button2.setOnClickListener {
                     if (TienSystemUtil.isFastClick(800)) {
                         return@setOnClickListener
                     }
-                    if (button2.text.toString() == context.getString(R.string.fragment21)) {//运行商
+                    if (button2.text.toString() == context.getString(R.string.fragment25)) {//还款
+                        val intent = Intent(context, TienRepaymentActivity::class.java)
+                        intent.putExtra(TienSystemUtil.ORDER_CODE, it1.MICYPp9)
+                        context.startActivity(intent)
+                    }
+                }
+                button1.setOnClickListener {
+                    if (TienSystemUtil.isFastClick(800)) {
+                        return@setOnClickListener
+                    }
+                    if (button1.text.toString() == context.getString(R.string.fragment21)) {//运行商
                         val intent = Intent(context, TienOperatorSelectActivity::class.java)
                         context.startActivity(intent)
                     } else {
