@@ -127,6 +127,7 @@ class TienOrderFragment :
             }
         }
         mBinding.rv1Id.adapter = adapter
+
     }
 
     override fun successTienRepayment(data: MutableList<TienRepaymentData>) {
